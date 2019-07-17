@@ -25,8 +25,11 @@ class App extends Component {
     return (
       <div>
         <Header />
-        <AttendList attends={this.state.attends} />
-        <AttendItem />
+        {
+          this.state.attends.length > 0
+            ? <AttendList attends={this.state.attends} />
+            : null
+        }
         <Footer owner="Swindle" email="swindlemaxxx@gmail.com" />
       </div>
     );

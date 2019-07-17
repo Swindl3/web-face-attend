@@ -6,20 +6,21 @@ class AttendList extends Component {
         console.log("constructorLIST",props);
         
     }
-    showAttend(){
-        return  this.props.attends && this.props.attends.length > 0 && this.props.attends.length !== undefined  && this.props.attends.map(attend => (
-            <AttendItem
-                key={attend.attend_id}
-                first_name={attend.first_name}
-                last_name={attend.last_name}
-                rfid_num={attend.rfid_num}
-                imgpath={attend.imgpath}
-                timestamp={attend.timestamp}
+    showAttend() {
+        let { attends } = this.props
+        return attends && attends.length > 0
+          ? attends.map((attend, key) => {
+            return <AttendItem
+              key={key}
+              first_name={attend.first_name}
+              last_name={attend.last_name}
+              rfid_num={attend.rfid_num}
+              imgpath={attend.imgpath}
+              timestamp={attend.timestamp}
             />
-         
-        ))
-        
-    }
+          })
+          : null
+      }
     render() {
         return (
             <div className="row">
