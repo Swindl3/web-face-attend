@@ -8,6 +8,7 @@ const Footer = (props) => {
             <div className="text-center title text-uppercase">
                 <small>
                     <span className="text-danger title">Powered By : {owner}</span> | <span className="text-muted">Contact Me : {email}</span>
+
                 </small>
             </div>
         </div>

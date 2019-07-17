@@ -37,6 +37,7 @@ class Header extends Component {
                         <h5 className="text-muted mt-4">{this.state.date.toLocaleTimeString()}</h5>
                     </div>
                 </div>
+                <hr />
             </div>
         )
     }
