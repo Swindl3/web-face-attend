@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import {img_url} from "../../Api"
 class AttendItem extends Component {
     constructor(props) {
         super(props)
@@ -7,14 +7,13 @@ class AttendItem extends Component {
     }
 
     showItem() {
-        const api_url = "http://localhost:8888/"
         const { first_name, last_name, rfid_num, imgpath, timestamp } = this.props
 
 
         return (
             <tbody>
                 <tr>
-                    <td class="text-center"><img style={{ width: 80, height: 80 }} src={api_url + imgpath} alt="new" /></td>
+                    <td class="text-center"><img style={{ width: 80, height: 80 }} src={img_url + imgpath} alt="new" /></td>
                     <td class="text-center">{first_name + ' ' + last_name}</td>
                     <td class="text-center">{rfid_num}</td>
                     <td class="text-center">{timestamp}</td>
