@@ -29,11 +29,14 @@ class Header extends Component {
         return (
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-8 title text-left">
-                        <h2 className="text-info"> <img className="mr-5" style={{ height: 120, width: 80 }} src="/images/logo/logo.png" alt="   " />  Face Attendance System (ระบบประทับเวลาด้วยใบหน้า)aaaazz</h2>
+                    <div className="col-md-1">
+                        <img className="mr-10 img-center" style={{ height: 120, width: 70}} src="/images/logo/logo.png" alt="   " />
                     </div>
-                    <div className="col-md-4 title text-right">
-                        <h5 className="text-muted mt-4">{this.state.date.toLocaleTimeString()}</h5>
+                    <div className="col-md-9 title text-left">
+                        <h4 className="text-info mt-5 ml-4 font4">   Face Attendance System (ระบบประทับเวลาด้วยใบหน้า)</h4>
+                    </div>
+                    <div className="col-md-2 title text-right">
+                        <h5 className="text-muted mt-4 font5">{this.state.date.toLocaleTimeString()}</h5>
                     </div>
 
                 </div>

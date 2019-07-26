@@ -10,6 +10,31 @@
     font-family:'Prompt-Medium';
     src: url('/fonts/Prompt-Medium.ttf')
 }
+@font-face{
+    font-family: 'PrintAble4U Regular ver 1.00';
+    src: url('/fonts/PrintAble4U Regular ver 1.00.ttf')
+}
+
+@font-face{
+    font-family: 'AlphabetHouses-Regular';
+    src: url('/fonts/AlphabetHouses-Regular.ttf')
+}
+
+@font-face{
+    font-family: 'THSarabunNew';
+    src: url('/fonts/THSarabunNew.ttf')
+}
+
+@font-face{
+    font-family: 'THSarabunNew';
+    src: url('/fonts/THSarabunNew.ttf')
+}
+
+@font-face{
+    font-family: 'Digital Display';
+    src: url('/fonts/Digital Display.ttf')
+}
+
 
 h1,h2,h3,h4,h5,h6{
     font-family: 'Prompt-Medium';
@@ -17,4 +42,36 @@ h1,h2,h3,h4,h5,h6{
 
 .title{
     font-family: 'Prompt-Regular';
+}
+
+.img-center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.font1{
+    font-family: 'AlphabetHouses-Regular';
+    font-size:22px;
+}
+
+.font2{
+    font-family: 'THSarabunNew';
+    font-size:26px;
+}
+
+.font3{
+    font-family: 'THSarabunNew';
+    font-size:26px;
+}
+
+.font4{
+    font-family: 'PrintAble4U Regular ver 1.00';
+    font-size:30px;
+}
+
+.font5{
+    font-family: 'Digital Display';
+    font-size:20px;
 }
