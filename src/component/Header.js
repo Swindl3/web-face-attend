@@ -30,7 +30,7 @@ class Header extends Component {
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-md-1">
-                        <img className="mr-10 img-center" style={{ height: 120, width: 70}} src="/images/logo/logo.png" alt="   " />
+                        <img className="mr-10 img-center" style={{ height: 120, width: 70 }} src="/images/logo/logo.png" alt="   " />
                     </div>
                     <div className="col-md-9 title text-left">
                         <h4 className="text-info mt-5 ml-4 font4">   Face Attendance System (ระบบประทับเวลาด้วยใบหน้า)</h4>
