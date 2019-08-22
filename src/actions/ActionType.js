@@ -1,0 +1,1 @@
+export const ATTEND_FETCH = "attend_fetch"

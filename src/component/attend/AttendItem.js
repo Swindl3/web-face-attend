@@ -139,4 +139,4 @@ class AttendItem extends Component {
     }
 }
 
-export default withRouter(AttendItem);
+export default withRouter(AttendItem); //ใส่ connect ไว้ข้างใน

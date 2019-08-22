@@ -2,32 +2,27 @@ import React, { Component } from 'react';
 // import './App.css'
 import Header from '../Header'
 import Footer from '../Footer'
-import Axios from 'axios'
 import AttendItem from '../../component/attend/AttendItem'
 import UserForm from '../../component/form/UserForm'
-import { api_url } from "../../Api"
+import { connect } from 'react-redux'
+import { AttendFetch } from '../../actions/CombineActions'
 class Home extends Component {
   constructor(props) {
     super(props)
-    this.state = { attends: [] }
+
   }
 
   componentDidMount() {
-    Axios.get(api_url)
-      .then(res => {
-        // console.log(res.data.body)
-        this.list = res.data.body
-        this.setState({ attends: this.list })
-        console.log("stateApp", this.state.attends)
-      })
+    this.props.AttendFetch();
   }
   render() {
+    console.log("propsStore",this.props)
     return (
       <div>
         <Header />
         {
-          this.state.attends.length > 0
-            ? <AttendItem attends={this.state.attends} />
+          this.props.attends.length > 0
+            ? <AttendItem attends={this.props.attends} />
             : null
         }
         {/* <UserForm /> */}
@@ -36,5 +31,10 @@ class Home extends Component {
     );
   }
 }
+function mapStateToProps({attends}){
+  // console.log(state)
+  // return {attends:state.attends}
+  return {attends}
+}
 
-export default Home;
+export default connect(mapStateToProps , {AttendFetch})(Home);
