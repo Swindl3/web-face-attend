@@ -30,7 +30,7 @@ class Home extends Component {
             ? <AttendItem attends={this.state.attends} />
             : null
         }
-        <UserForm />
+        {/* <UserForm /> */}
         <Footer owner="Swindle" email="swindlemaxxx@gmail.com" />
       </div>
     );

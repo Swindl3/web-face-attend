@@ -3,18 +3,25 @@ import { img_url } from "../../Api"
 import ReactTable from 'react-table'
 import "react-table/react-table.css"
 import ExportToExcel from "../table-to-excel/ExportToExcel"
+import { withRouter } from 'react-router-dom'
 class AttendItem extends Component {
     constructor(props) {
         super(props)
 
     }
-
+    onEdit(id) {
+        console.log("onEdit : ", id)
+        this.props.history.push('/user'+id)
+    }
+    onDelete(id) {
+        console.log("onDelete : ", id)
+    }
     render() {
         let getImgPath = this.props.attends;
         getImgPath = getImgPath.map((row) => {
             return row.imgpath;
         });
-        // const { user_id, first_name, last_name, rfid_num, imgpath, timestamp } = this.props
+        const { attend_id } = this.props
         // console.log("imgpath", imgpath)
         const columns = [
             {
@@ -86,9 +93,9 @@ class AttendItem extends Component {
                         <div>
 
 
-                            <button className="btn btn-warning mt-4" onClick={() => console.log("propsEdit", props)}>Edit</button>
+                            <button className="btn btn-warning mt-4" onClick={() => this.onEdit(props.original)}>Edit</button>
                             <span>&nbsp;&nbsp;</span>
-                            <button className="btn btn-danger mt-4" onClick={() => console.log("propsDel", props)}>Del</button>
+                            <button className="btn btn-danger mt-4" onClick={() => this.onDelete(props.original.attend_id)}>Del</button>
 
                         </div>
 
@@ -113,7 +120,7 @@ class AttendItem extends Component {
                     filterable
                     defaultPageSize={10}
                     showPaginationTop={false}
-                    noDataText={"Please Wait..."}
+                    noDataText={"Data Not Found"}
                 >
                     {(state, filtredData, instance) => {
                         this.reactTable = state.pageRows.map(attend => { return attend._original });
@@ -132,4 +139,4 @@ class AttendItem extends Component {
     }
 }
 
-export default AttendItem;
+export default withRouter(AttendItem);

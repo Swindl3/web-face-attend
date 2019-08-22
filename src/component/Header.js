@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router-dom'
 // const Header = () => {
 //     return <h1>This is Header</h1>
 // }
@@ -34,9 +35,17 @@ class Header extends Component {
                     </div>
                     <div className="col-md-9 title text-left">
                         <h4 className="text-info mt-5 ml-4 font4">   Face Attendance System (ระบบประทับเวลาด้วยใบหน้า)</h4>
+                        <ul className="list-inline mt-3 ml-4 ">
+                            <li className="list-inline-item"><Link className="text-info" to="/">Home</Link></li>
+                            <li className="list-inline-item">|</li>
+                            <li className="list-inline-item"><Link className="text-info" to="/user">User</Link></li>
+                            <li className="list-inline-item">|</li>
+                            <li className="list-inline-item"><Link className="text-info" to="/about">About</Link></li>
+                        </ul>
                     </div>
                     <div className="col-md-2 title text-right">
                         <h5 className="text-muted mt-4 font5">{this.state.date.toLocaleTimeString()}</h5>
+                       
                     </div>
 
                 </div>
