@@ -6,14 +6,17 @@ import AttendItem from '../../component/attend/AttendItem'
 import UserForm from '../../component/form/UserForm'
 import { connect } from 'react-redux'
 import { AttendFetch } from '../../actions/CombineActions'
+// import socketIOClient  from "socket.io-client"
+// let socket ;
 class Home extends Component {
   constructor(props) {
     super(props)
-
+   
   }
-
+  
   componentDidMount() {
     this.props.AttendFetch();
+    // this.callSocket()
   }
   render() {
     console.log("propsStore",this.props)
