@@ -4,17 +4,19 @@ import ReactTable from 'react-table'
 import "react-table/react-table.css"
 import ExportToExcel from "../table-to-excel/ExportToExcel"
 import { withRouter } from 'react-router-dom'
+import {attendDelete} from '../../actions/CombineActions'
 class AttendItem extends Component {
     constructor(props) {
         super(props)
-
+        this.onDelete = this.onDelete.bind(this)
     }
     onEdit(id) {
         console.log("onEdit : ", id)
         this.props.history.push('/user'+id)
     }
     onDelete(id) {
-        console.log("onDelete : ", id)
+        console.log(id)
+        this.props.attendDelete(id);
     }
     render() {
         let getImgPath = this.props.attends;
@@ -24,14 +26,7 @@ class AttendItem extends Component {
         const { attend_id } = this.props
         // console.log("imgpath", imgpath)
         const columns = [
-            {
-                Header: "AttenId",
-                accessor: "attend_id",
-                style: {
-                    textAlign: "center"
-                },
-                width: 100
-            },
+           
             {
                 Header: "UserId",
                 accessor: "user_id",
@@ -77,6 +72,13 @@ class AttendItem extends Component {
                 }
             },
             {
+                Header: "StudentID",
+                accessor: "student_id",
+                style: {
+                    textAlign: "center"
+                }
+            },
+            {
                 Header: "Timestamp",
                 accessor: "timestamp",
                 style: {
@@ -93,8 +95,7 @@ class AttendItem extends Component {
                         <div>
 
 
-                            <button className="btn btn-warning mt-4" onClick={() => this.onEdit(props.original)}>Edit</button>
-                            <span>&nbsp;&nbsp;</span>
+            
                             <button className="btn btn-danger mt-4" onClick={() => this.onDelete(props.original.attend_id)}>Del</button>
 
                         </div>

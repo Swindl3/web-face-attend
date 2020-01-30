@@ -7,7 +7,7 @@ const Footer = (props) => {
             <hr />
             <div className="text-center title text-uppercase">
                 <small>
-                    <span className="text-danger title">Powered By : {owner}</span> | <span className="text-muted">Contact Me : {email}</span>
+                    <span className="text-danger title">Copyright © 2019</span><span className="text-muted"> มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน วิทยาเขตขอนแก่น</span>
 
                 </small>
             </div>
@@ -17,3 +17,4 @@ const Footer = (props) => {
 
 
 export default Footer;
+

@@ -36,11 +36,11 @@ class Header extends Component {
                     <div className="col-md-9 title text-left">
                         <h4 className="text-info mt-5 ml-4 font4">   Face Attendance System (ระบบประทับเวลาด้วยใบหน้า)</h4>
                         <ul className="list-inline mt-3 ml-4 ">
-                            <li className="list-inline-item"><Link className="text-info" to="/">Home</Link></li>
-                            <li className="list-inline-item">|</li>
-                            <li className="list-inline-item"><Link className="text-info" to="/user">User</Link></li>
-                            <li className="list-inline-item">|</li>
-                            <li className="list-inline-item"><Link className="text-info" to="/about">About</Link></li>
+                            {/* <li className="list-inline-item"><Link className="text-info" to="/">Home</Link></li> */}
+                            {/* <li className="list-inline-item">|</li> */}
+                            {/* <li className="list-inline-item"><Link className="text-info" to="/user">User</Link></li> */}
+                            {/* <li className="list-inline-item">|</li> */}
+                            {/* <li className="list-inline-item"><Link className="text-info" to="/about">About</Link></li> */}
                         </ul>
                     </div>
                     <div className="col-md-2 title text-right">
